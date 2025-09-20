@@ -1,16 +1,3 @@
-// =============================
-// server.js (รันใน Node.js)
-// =============================
-// ใช้สำหรับเชื่อมต่อ TikTok LIVE ด้วย tiktok-live-connector (ฝั่งเซิร์ฟเวอร์)
-// แล้วกระจายข้อความแชทให้ UI (React) ผ่าน WebSocket
-// วิธีใช้:
-// 1) สร้างโฟลเดอร์ใหม่ เช่น server
-// 2) npm init -y
-// 3) npm i tiktok-live-connector ws
-// 4) node server.js
-// 5) UI จะเชื่อมต่อ ws://localhost:3001
-
-
 import { WebSocketServer } from "ws";
 import { TikTokLiveConnection, WebcastEvent } from "tiktok-live-connector";
 
