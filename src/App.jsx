@@ -190,7 +190,7 @@ export default function App() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           <div className="flex flex-col md:col-span-2">
             <label className="text-sm mb-1">TikTok Username</label>
-            <input className="rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="เช่น officialgeilegisela" />
+            <input className="rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="telechubbiies" />
           </div>
           <div className="flex flex-col">
             <label className="text-sm mb-1">เวลานับโหวต (วินาที)</label>
@@ -198,17 +198,17 @@ export default function App() {
           </div>
           <div className="flex gap-2 md:justify-end">
             {!isConnected ? (
-              <button className="rounded-2xl px-4 py-2 bg-slate-900 text-white shadow hover:shadow-md active:scale-[.98]" onClick={connectWS}>Connect</button>
+              <button className="rounded-2xl px-4 py-2 bg-slate-900 text-lime-500 shadow hover:shadow-md active:scale-[.98]" onClick={connectWS}>Connect</button>
             ) : (
-              <button className="rounded-2xl px-4 py-2 bg-slate-200 text-slate-800 shadow hover:shadow-md active:scale-[.98]" onClick={disconnectWS}>Disconnect</button>
+              <button className="rounded-2xl px-4 py-2 bg-slate-200 text-rose-500 shadow hover:shadow-md active:scale-[.98]" onClick={disconnectWS}>Disconnect</button>
             )}
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <button disabled={isStarting || isCounting} onClick={startPoll} className={`rounded-2xl px-4 py-2 shadow active:scale-[.98] ${isStarting || isCounting ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-indigo-600 text-white'}`}>Start</button>
-          <button disabled={!isStarting && !isCounting} onClick={stopPoll} className={`rounded-2xl px-4 py-2 shadow active:scale-[.98] ${!isStarting && !isCounting ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-rose-600 text-white'}`}>Stop</button>
-          <button onClick={clearVotes} className="rounded-2xl px-4 py-2 bg-white border border-slate-300 text-slate-700 shadow active:scale-[.98]">Clear</button>
+          <button disabled={isStarting || isCounting} onClick={startPoll} className={`rounded-2xl px-4 py-2 shadow active:scale-[.98] ${isStarting || isCounting ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-indigo-600 text-lime-500'}`}>Start</button>
+          <button disabled={!isStarting && !isCounting} onClick={stopPoll} className={`rounded-2xl px-4 py-2 shadow active:scale-[.98] ${!isStarting && !isCounting ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-rose-600 text-rose-500'}`}>Stop</button>
+          <button onClick={clearVotes} className="rounded-2xl px-4 py-2 bg-white border border-slate-300 text-white shadow active:scale-[.98]">Clear</button>
         </div>
 
         <div className="rounded-2xl border border-slate-200 p-4 bg-white/60 space-y-2">
